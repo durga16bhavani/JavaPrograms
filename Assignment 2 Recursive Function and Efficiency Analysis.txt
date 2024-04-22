@@ -1,0 +1,71 @@
+Assignment 2: Recursive Function and Efficiency Analysis - Write a recursive function pseudocode and calculate the nth Fibonacci number and use Big O notation to analyze its efficiency. Compare this with an iterative approach and discuss the pros and cons in terms of space and time complexity.
+
+
+
+
+function fibonacciRecursive(n: integer) -> integer:
+    if n equals 0:
+        return 0
+    else if n equals 1:
+        return 1
+    else:
+        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+
+
+Explanation:
+
+The fibonacciRecursive function calculates the nth Fibonacci number using recursion.
+It has a base case for n equals 0 and 1, which returns 0 and 1 respectively.
+For n greater than 1, it recursively calls itself with n - 1 and n - 2, and returns the sum of the results.
+Now, let's analyze the efficiency using Big O notation:
+
+The time complexity of the recursive approach is approximately O(2^n). This is because each recursive call branches into two more recursive calls, resulting in an exponential growth in the number of function calls.
+The space complexity is also O(n) due to the recursive calls, as the call stack grows linearly with the input n.
+Now, let's compare this with an iterative approach:
+
+
+
+function fibonacciIterative(n: integer) -> integer:
+    if n equals 0:
+        return 0
+    else if n equals 1:
+        return 1
+    else:
+        fibPrev = 0
+        fibCurr = 1
+        for i from 2 to n:
+            fibNext = fibPrev + fibCurr
+            fibPrev = fibCurr
+            fibCurr = fibNext
+        return fibCurr
+
+Explanation:
+
+The fibonacciIterative function calculates the nth Fibonacci number using an iterative approach.
+It starts with base cases for n equals 0 and 1.
+It then iterates using a loop from 2 to n, calculating Fibonacci numbers iteratively.
+It maintains two variables fibPrev and fibCurr to keep track of the previous and current Fibonacci numbers.
+Now, let's analyze the efficiency of the iterative approach:
+
+The time complexity of the iterative approach is O(n). This is because it iterates through the loop n times, performing constant-time operations in each iteration.
+The space complexity is O(1), as it only requires a constant amount of additional space for storing variables fibPrev, fibCurr, and fibNext.
+Pros and cons of recursive approach:
+
+Pros: 
+Simplicity in implementation, easy to understand.
+Cons:
+Exponential time complexity and high space complexity due to recursive function calls, leading to potential stack overflow errors for large values of n.
+Pros and cons of iterative approach:
+
+Pros: 
+Linear time complexity and low space complexity, making it efficient for large values of n.
+Cons: 
+More complex than the recursive approach, especially for beginners, and may be harder to understand.
+
+In conclusion, while the recursive approach is simple and intuitive, it suffers from poor performance for large n due to exponential time complexity and high space complexity. The iterative approach, on the other hand, offers better efficiency with linear time complexity and low space complexity, making it more suitable for practical use, especially for large inputs.
+
+
+
+
+
+

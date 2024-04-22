@@ -1,0 +1,128 @@
+Assignment 1: Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm. Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry run of your algorithm.
+
+What is bubble sort?
+An in-place sorting algorithm that finds max. element in each cycle and puts it in appropriate position in list by performing swapping adjacent elements. In bubble sort, we continue swapping adjacent elements until they are in correct order.
+
+As we need to iterate the whole array for every element, the complexity of this algorithm is O(n^2).
+
+Time and Space Complexity:
+  Best Time Complexity: O(n)
+  Average Time Complexity: O(n^2)
+  Worst Time Complexity: O(n^2)
+  Best Space Complexity: O(1)
+
+
+Steps to implement bubble sort:
+1.In first cycle,
+       1.Start by comparing 1st and 2nd element and swap if 1st element is greater.
+       2.After that do the same for 2nd and 3rd element.
+       3.At the end of cycle you will get max element at the end of list.
+2.Now do the same in all subsequent cycles.
+3.Perform this for (number of elements – 1) times.
+4.You will get sorted list.
+
+
+
+Sorting
+----------
+	When we have list of elements
+	ex:
+		array
+110, 121, 118, 212, 123, 214, 150, 551, 1091, 1121, 119, 1112, 125
+
+how can we sort these elements of list.
+
+Question:
+	what are the different types of sorting?	
+
+simplest sorting algorithm to write is
+	bubble sort
+
+N=13
+
+Pass 1:
+	12 comparisons
+
+Pass 2:
+	11 comparisons	(we ignore last element, which is already the highest).
+
+Pass 3:
+	10 comparisons
+
+Pass 4:
+	9 comparisons
+
+Pass 5:
+	8 comparisons
+
+Pass 6:
+	7 comparisons
+
+Pass 7:
+	6 comparisons
+
+Pass 8:
+	5 comparisons
+
+Pass 9:
+	4 comparisons
+
+Pass 10:
+	3 comparisons
+
+Pass 11:
+	2 comparisons
+
+Pass 12:
+	1 comparison
+
+
+Best and Worst case scenario:
+	in any scenario, this bubble sort is going to perform blindly all passess and corresponding number of 	comparisons.
+
+
+for 13 elements,
+	12 passes
+
+totally how many comparisons?
+	12 + 11 + 10 ..... 3 + 2 + 1		=		78
+
+	13(12)/2	=13*6	=	78		
+
+5 elements
+	4 + 3 + 2 + 1	=	10
+
+	N(N-1)/2
+	
+
+	5(4)/2	=15
+
+bubble sort do the following number of comparisons:
+	N(N-1)/2
+in all scenarios.
+
+	O(N power 2)
+
+poorest algorithm to sort 
+
+
+Pseudocode :
+
+ARRAY a[0...n]
+FOR(i=0...n0
+   swapped=false
+   FOR(j=1...n-i)
+      IF(a[j]<a[j-1])
+        swap(a,j,j-1)
+        swapped=true
+      END IF
+   END FOR
+   IF(! swapped)
+      break
+   END IF
+ END FOR
+
+
+
+
+
