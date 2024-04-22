@@ -1,0 +1,46 @@
+Assignment 3: Function Design and Modularization - Create a document that describes the design of two modular functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number. Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization. 
+
+
+1.Function to find factorial of a number
+
+
+Pseudocode
+
+function factorial(n: integer) -> integer:
+    if n equals 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+
+2. Function to Find nth Fibonacci Number
+
+Pseudocode
+
+function fibonacci(n: integer) -> integer:
+    if n equals 0:
+        return 0
+    else if n equals 1:
+        return 1
+    else:
+        fibPrev = 0
+        fibCurr = 1
+        for i from 2 to n:
+            fibNext = fibPrev + fibCurr
+            fibPrev = fibCurr
+            fibCurr = fibNext
+        return fibCurr
+
+
+
+Benefits of Modularity in Programming:
+
+1.Code Reusability: Modular functions can be reused in different parts of the program or even in other projects without rewriting the same logic. For example, the factorial function can be used in various mathematical calculations without duplicating its code.
+
+2.Readability and Maintainability: Breaking down a program into modular functions enhances readability and makes it easier to understand and maintain. Each function serves a specific purpose, making the code more organized and manageable.
+
+3.Testing and Debugging: Modular functions can be tested individually, which simplifies the process of identifying and fixing bugs. It also allows for easier unit testing, where each function's behavior can be tested in isolation.
+
+4.Encapsulation: Modularization helps in encapsulating functionality, allowing developers to hide implementation details and expose only necessary interfaces. This enhances security and reduces the risk of unintended interactions between different parts of the codebase.
+
+5.Scalability: As the program grows, modular design facilitates scalability by enabling developers to add, remove, or modify individual functions without affecting the entire codebase. This flexibility is crucial for managing complexity in large projects.
